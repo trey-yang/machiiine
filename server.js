@@ -6,6 +6,7 @@ const fs = require('mz/fs');
 var port = 3000;
 
 var index = require('./routes/index');
+var cam = require('./routes/camtest');
 
 var app = express();
 
@@ -15,15 +16,15 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 // Static Folder
-app.use(express.static(path.join(__dirname, 'client')));  // angular2 stuff
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // bodyParser MiddleWare
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-// routes
+// Routes
 app.use('/', index);
+app.use('/cam', cam);
 
 app.listen(port, function(){
   console.log('Magic happening on port '+port);
