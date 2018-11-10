@@ -1,0 +1,26 @@
+{
+  "name": "machiiine",
+  "version": "0.1.0",
+  "description": "facial recog for connecting faces to names",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trey-yang/machiiine.git"
+  },
+  "author": "Trey Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trey-yang/machiiine/issues"
+  },
+  "homepage": "https://github.com/trey-yang/machiiine#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongojs": "^2.6.0",
+    "mz": "^2.7.0"
+  }
+}
