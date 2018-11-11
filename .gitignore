@@ -43,4 +43,4 @@ Thumbs.db
 node_modules/*
 package-lock.json
 secrets/*
-routes/camtest.js
+routes/camtestMEGA.js

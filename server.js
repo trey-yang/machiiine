@@ -7,6 +7,7 @@ var port = 3000;
 
 var index = require('./routes/index');
 var upload = require('./routes/upload');
+var cam = require('./routes/camtest');
 
 var app = express();
 
