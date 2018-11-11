@@ -28,7 +28,7 @@ app.use('/', index);
 app.use('/cam', cam);
 app.post('/cam', cam);
 app.post('/upload', upload);
-app.post('/compare', compare);
+//app.post('/compare', compare);
 
 app.listen(port, function(){
   console.log('Magic happening on port '+port);
