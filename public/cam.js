@@ -72,6 +72,7 @@ $(function() {
       $("#upload_snapshot").prop("disabled", true);
 
       var snapshot = $(".item.selected").data("snapshot");
+      var api_url = "/upload";
       snapshot.upload({api_url: api_url}).done(upload_done).fail(upload_fail);
     };
 
