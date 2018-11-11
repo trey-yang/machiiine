@@ -16,12 +16,30 @@ const fs = require('mz/fs');
 router.post('/upload', function(req, res, next) {
   var photo = req;
   // make the request
-  var nm = Math.floor((Math.random() * 100000) + 1)+'.jpg';
+  var nm = Math.floor((Math.random() * 100000) + 1)+'.png';
 
   var params = {Bucket: 'face-space', Key: nm, Body: photo};
   s3.upload(params, function(err, data) {
-    console.log(err, data);
+    res.render("index.html");
   });
+
+  /*
+  var param_compare = {
+     "CollectionId": "face-space",
+     "FaceMatchThreshold": 0,
+     "Image": {
+        "S3Object": {
+           "Bucket": "face-space",
+           "Name": "45585.jpg",
+        }
+     },
+  };
+  Rek.searchFacesByImage(param_compare, function(err, response) {
+     if (err) console.log(err, err.stack); // an error occurred
+     temp = JSON.parse(JSON.stringify(response, null, '\t'));
+     console.log("This face matches with: "+temp.FaceMatches[0].Face.ExternalImageId+" with a confidence of: "+temp.FaceMatches[0].Similarity);
+  });
+*/
 });
 
 
