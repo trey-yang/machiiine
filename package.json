@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/trey-yang/machiiine#readme",
   "dependencies": {
+    "aws-sdk": "^2.353.0",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongojs": "^2.6.0",
-    "mz": "^2.7.0"
+    "mz": "^2.7.0",
+    "uuid": "^3.3.2"
   }
 }

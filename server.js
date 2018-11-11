@@ -7,6 +7,7 @@ var port = 3000;
 
 var index = require('./routes/index');
 var cam = require('./routes/camtest');
+var upload = require('./routes/upload');
 
 var app = express();
 
@@ -25,6 +26,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Routes
 app.use('/', index);
 app.use('/cam', cam);
+app.post('/cam', cam);
+app.post('/upload', upload);
 
 app.listen(port, function(){
   console.log('Magic happening on port '+port);
