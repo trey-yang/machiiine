@@ -6,8 +6,8 @@ const fs = require('mz/fs');
 var port = 3000;
 
 var index = require('./routes/index');
-var cam = require('./routes/camtest');
 var upload = require('./routes/upload');
+var cam = require('./routes/camtest');
 
 var app = express();
 
